@@ -2,3 +2,9 @@
 .env
 *.mp3
 *.txt
+*.mp4
+*.pickle
+token.json
+google_secret.json
+*.pyc
+*.db
