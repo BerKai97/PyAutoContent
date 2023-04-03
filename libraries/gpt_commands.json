@@ -1,0 +1,15 @@
+{
+
+    "content_creator":
+        [
+            {
+                "role": "system",
+                "content": "You are a content creator."
+            },
+            {
+                "role": "user",
+                "content": "Generate content about \"How to create a business plan\" in the format:{\"title\": \"A title to make people click about video content\" \"description\": \"content description\" \"content\": \"complete content, min 25 sec, max 9 min when reading\" \"tags\": [tags]"
+            }
+
+        ]
+}

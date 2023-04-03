@@ -8,3 +8,4 @@ token.json
 google_secret.json
 *.pyc
 *.db
+cert.pem

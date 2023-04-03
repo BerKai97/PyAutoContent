@@ -16,6 +16,16 @@ class Content(SQLModel, table=True):
     # relationships
     category_rel: Optional["ContentCategory"] = Relationship(back_populates="content_rel")
     topic_rel: Optional["ContentTopic"] = Relationship(back_populates="content_rel")
+    playlist_rel: Optional["Playlist"] = Relationship(back_populates="content_rel")
+
+class Playlist(SQLModel, table=True):
+    __tablename__ = "Playlist"
+    metadata = PublicMeta
+    id: Optional[int] = Field(default=None, primary_key=True, index=True)
+    name: str = Field(nullable=False, index=True)
+    description: str = Field(nullable=True, index=False)
+    # relationships
+    contents : List["Content"] = Relationship(back_populates="playlist_rel")
 
 class ContentCategory(SQLModel, table=True):
     __tablename__ = "ContentCategory"
